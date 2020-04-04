@@ -1,18 +1,15 @@
 <?php 
 	class DB{
-		private $url = "207.210.232.36";
+		private $url = "";
 		private $db = "gelagos_ge";
 		private $mysqli;
 		public function __construct($level){
 			switch ($level) {
 				case 1:
-					$this->mysqli = new mysqli($this->url, "root", "", $this->db);
+					$this->mysqli = new mysqli($this->url, "", "", $this->db);
 					break;
 				case 2:
-					$this->mysqli = new mysqli($this->url, "gelagos_ultra", "d43m0nt00l5", $this->db);
-					break;
-				case 3:
-					$this->mysqli = new mysqli($this->url, "root", "", $this->db);
+					$this->mysqli = new mysqli($this->url, "", "", $this->db);
 					break;
 			}
 		}
