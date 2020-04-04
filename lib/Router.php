@@ -17,7 +17,12 @@
                 return static::$routes[$route];
             }
             else {
-                header("Location: 404");
+                if ($route == "") {
+                    header("Location: welcome");
+                }
+                else {
+                    return static::$routes["404"];
+                }
             }
         }
     }

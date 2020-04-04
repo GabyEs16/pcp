@@ -1,5 +1,5 @@
 <?php
-	Router::add("index", "MainController", "index");
+	Router::add("welcome", "MainController", "index");
 	Router::add("login", "MainController", "login");
 	Router::add("directora", "directoraController", "calendario");
 	Router::add("educadora", "educadoraController", "calendario");

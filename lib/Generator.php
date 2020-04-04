@@ -1,7 +1,7 @@
 <?php 
   //CLASE QUE GENERA ETIQUETAS HTML
 	class TagsGenerator{
-    //FUNCION PARA GENERAR TABLAS
+    //GENERA TABLAS
 		public static function newTable($array, $header){
       $headers = "";
       $data = "";
@@ -46,13 +46,14 @@
           </div>';
           return $table;
 		}
+    //GENERA FORMULARIOS
     public static function newForm($data){
       $formulario = "<form>";
       
       $formulario .="</form>";
       return $formulario;
     }
-    //FUNCION PARA GENERAR MODALES
+    //GENERA MODALES
     public static function newModal($id, $size, $title,$content, $pbutton, $sbutton){
       $modal = '
       <div class="modal fade bd-example-modal-'.$size.'" tabindex="-1" role="dialog"
@@ -77,6 +78,7 @@
       </div>';
       return $modal;
     }
+    //GENERA BOTONES
     public static function newButton($action, $color, $icon, $text){
       $button = '
         <a href="'.$action.'" class="btn btn-'.$color.' btn-icon">

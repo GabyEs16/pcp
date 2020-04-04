@@ -3,6 +3,7 @@
 		private $url = "";
 		private $db = "gelagos_ge";
 		private $mysqli;
+		//Al ejecutarse el constructor asigna un usuario y una contrasena dependiendo el nivel de privilegios
 		public function __construct($level){
 			switch ($level) {
 				case 1:
@@ -33,9 +34,6 @@
 			{
 				return false;
 			}
-		}
-		public function insert($sp){
-			return mysqli_query($this->mysqli, $sp) or die($this->mysqli->error);
 		}
 		public function clearbuffer($consulta) 
 		{

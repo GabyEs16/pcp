@@ -10,9 +10,11 @@
 			$this->age = $age;
 			$this->email = $email;
 		}
+		//Devuelve query para insertar una nueva educadora
 		public function getSPinsert(){
 			return "call p_usuario('".$this->name."', ".$this->age.",'".$this->email."')";
 		}
+		//Devuelve query para consultar la lista de educadoras
 		public function getSPconsult(){
 			return "call v_usuario()";
 		}
