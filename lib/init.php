@@ -7,5 +7,4 @@
 	require SYS_PATH."DB.php";
 	require SYS_PATH."Model.php";
 	require APP_PATH."models/User.php";
-	require APP_PATH."models/Vehiculo.php";
  ?>
